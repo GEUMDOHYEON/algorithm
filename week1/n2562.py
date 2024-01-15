@@ -9,7 +9,7 @@ print(max(a))
 print(a.index(max(a))+1)
 
 # x = a[0]
-# s = 0
+# s = 1
 
 # for i in range(len(a)):
 #     if x < a[i]:
