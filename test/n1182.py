@@ -1,0 +1,2 @@
+N,S = int(input())
+
