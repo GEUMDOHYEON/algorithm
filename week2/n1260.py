@@ -20,14 +20,6 @@ for _ in range(M):
 visited1 = [False] * (N + 1)  # dfs의 방문기록
 visited2 = [False] * (N + 1)  # bfs의 방문기록
 
-# def dsf(V):     #dsf를 구현한 재귀함수 (인접 행렬)
-#     visited1[V] = True # 재방문하지 않기 위해 visited1[V]에 True 대입
-#     print(V,end=" ")
-
-#     for i in range(1,N+1):
-#         if not visited1[i] and graph[V][i]:  
-#             dsf(i)
-
 def dsf(V):     #dsf를 구현한 재귀함수 (인접 리스트)
     visited1[V] = True # 재방문하지 않기 위해 visited1[V]에 True 대입
     print(V,end=" ")
@@ -35,19 +27,6 @@ def dsf(V):     #dsf를 구현한 재귀함수 (인접 리스트)
     for i in graph[V]:
         if not visited1[i]:  
             dsf(i)
-
-# def bsf(V):       # 인접 행렬로 구현한 bsf
-#     queue = deque()
-#     visited2[V] = True 
-#     queue.append(V)
-
-#     while queue:
-#         V = queue.popleft()
-#         print(V,end=" ")
-#         for i in range(1,N+1):
-#             if not visited2[i] and graph[V][i]:
-#                 queue.append(i)
-#                 visited2[i] = True
 
 def bsf(V):
     queue = deque()
@@ -65,3 +44,24 @@ def bsf(V):
 dsf(V)
 print()
 bsf(V)
+
+# def dsf(V):     #dsf를 구현한 재귀함수 (인접 행렬)
+#     visited1[V] = True # 재방문하지 않기 위해 visited1[V]에 True 대입
+#     print(V,end=" ")
+
+#     for i in range(1,N+1):
+#         if not visited1[i] and graph[V][i]:  
+#             dsf(i)
+
+# def bsf(V):       # 인접 행렬로 구현한 bsf
+#     queue = deque()
+#     visited2[V] = True 
+#     queue.append(V)
+
+#     while queue:
+#         V = queue.popleft()
+#         print(V,end=" ")
+#         for i in range(1,N+1):
+#             if not visited2[i] and graph[V][i]:
+#                 queue.append(i)
+#                 visited2[i] = True
